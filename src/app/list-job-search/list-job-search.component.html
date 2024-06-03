@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <div>Job Offers</div>
+  <div *ngFor="let job of jobs">
+    <div> <img src="{{job.companyLogo}}" alt="" /></div>
+    <a [routerLink]="['/job', job.id]">
+      <div class="">
+        {{ job.title }}
+      </div>
+    </a>
+    <div>Company: {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
+      <span class="icon-star"></span>
+    </div>
+  </div>
+</div>

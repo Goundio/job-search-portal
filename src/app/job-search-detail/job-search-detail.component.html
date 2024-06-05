@@ -1,0 +1,14 @@
+<button routerLink="/" rou type="button" class="back">Back</button>
+<div class="bloc">
+  <div class="container" *ngIf="job">
+    <div class="comp-title">
+      <img src="{{job.companyLogo}}" alt="" /> {{ job.companyName }} - {{ job.title }}
+    </div>
+    <div class="type-ind"><span class="type">{{ job.types }}</span> &nbsp; &nbsp;<span class="ind">{{ job.industries }}</span></div>
+    <div><span class="strong">Publish date : </span>{{job.publishDate}}</div>
+    <div><span class="strong">Location: </span>{{job.location}}</div>
+    <div><span class="strong">Reference: </span>{{job.reference}}</div>
+    <div><span class="strong">Description: </span>{{job.description}}</div>
+    <div [innerHTML]="job.description"></div>
+  </div>
+</div>

@@ -1,11 +1,16 @@
-<div><span>Sorry, but you haven't chosen a favorite yet</span></div>
-<div class="container mt-4">
-    <div *ngFor="let job of jobs">
-        <div> <img src="{{job.companyLogo}}" alt="" /></div>
-        <div class="">
-            {{ job.title }}
-        </div>
-        <div>Company: {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
+<div *ngIf="jobs.length === 0" class="noFav"><span>Sorry, but you haven't chosen a favorite yet !</span></div>
+<div class="container">
+    <div *ngIf="jobs.length > 0">
+        <div *ngFor="let job of jobs">
+            <div class="bloc"> <img src="{{job.companyLogo}}" alt="" />
+                <div class="title">
+                    <span>{{ job.title }}</span>
+                </div>
+                <div class="company-ref"><span class="test"> {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp;
+                        Reference: {{ job.reference }}
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>

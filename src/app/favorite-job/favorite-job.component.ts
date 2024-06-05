@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { Job } from '../list-job-search/job.model';
 import { CommonModule } from '@angular/common';
+import { FavoriteJobService } from './favorite-job.service';
 
 @Component({
   selector: 'app-favorite-job',
@@ -9,8 +10,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './favorite-job.component.html',
   styleUrl: './favorite-job.component.css'
 })
-export class FavoriteJobComponent {
+export class FavoriteJobComponent implements OnInit {
 
-  @Input() jobs!: Job[];
-  @Output() buy = new EventEmitter();
+  jobs!: Job[];
+  private favJobService = inject(FavoriteJobService);
+
+  ngOnInit(): void {
+    this.jobs = this.favJobService.getFav();
+  }
+
 }

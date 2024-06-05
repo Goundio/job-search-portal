@@ -1,3 +1,7 @@
+.back {
+    margin-left: 484px;
+}
+
 .bloc {
     display: flex;
     justify-content: space-between;
@@ -10,18 +14,23 @@ img {
     max-width: 10% !important;
 }
 
-.title {
-    margin-top: 25px;
-    font-size: larger;
+.comp-title {
+    font-size: xx-large;
     font-weight: bold;
     color: black;
 }
 
-.company-ref {
-    margin-top: 50px;
-    margin-left: -500px;
+.type-ind {
+    margin-left: 110px;
 }
 
-.yellow {
-    background-color: yellow;
+.type,
+.ind {
+    color: white;
+    background: darkblue;
+}
+
+.strong {
+    font-weight: bold;
+    color: black;
 }

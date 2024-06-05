@@ -1,0 +1,30 @@
+.noFav {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+
+.bloc {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    margin-right: 485px;
+    margin-left: 473px;
+}
+
+img {
+    max-width: 10% !important;
+}
+
+.title {
+    margin-top: 25px;
+    font-size: larger;
+    font-weight: bold;
+    color: black;
+}
+
+.company-ref {
+    margin-top: 50px;
+    margin-left: -400px;
+}

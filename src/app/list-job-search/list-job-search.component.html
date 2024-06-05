@@ -6,11 +6,11 @@
           <span>{{ job.title }}</span>
         </div>
       </a>
-      <div class="company-ref"><span> {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
+      <div class="company-ref"><span class="test"> {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
         </span>
       </div>
       <div>
-        <span (click)="getFavorite(job)" class="icon-star" [ngClass]="job ? 'yellow' : ''"></span>
+        <span (click)="manageFav(job)" class="icon-star" [ngClass]="isFav(job) ? 'yellow' : ''"></span>
       </div>
     </div>
   </div>

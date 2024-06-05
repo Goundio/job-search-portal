@@ -1,19 +1,19 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { Job } from '../list-job-search/job.model';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { JobSearchService } from '../job-search.service';
 import { CommonModule } from '@angular/common';
+import { JobSearchService } from '../list-job-search/job-search.service';
 
 @Component({
-  selector: 'app-list-job-search-detail',
+  selector: 'app-job-search-detail',
   standalone: true,
   imports: [RouterLink,
     CommonModule
   ],
-  templateUrl: './list-job-search-detail.component.html',
-  styleUrl: './list-job-search-detail.component.css'
+  templateUrl: './job-search-detail.component.html',
+  styleUrl: './job-search-detail.component.css'
 })
-export class ListJobSearchDetailComponent implements OnInit {
+export class JobSearchDetailComponent implements OnInit {
 
   job!: Job;
 

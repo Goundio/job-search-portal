@@ -21,7 +21,7 @@ export class JobSearchDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
 
   ngOnInit(): void {
-    const jobId = this.route.snapshot.paramMap.get('id');
+    const jobId = Number(this.route.snapshot.paramMap.get('id'));
     this.mockHandlers.getJobDetail(jobId).subscribe((job) => {
       this.job = job;
     });

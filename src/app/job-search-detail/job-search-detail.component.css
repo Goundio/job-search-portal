@@ -1,13 +1,13 @@
 .back {
-    margin-left: 484px;
+    margin-left: 180px;
 }
 
 .bloc {
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
-    margin-right: 470px;
-    margin-left: 473px;
+    margin-right: 160px;
+    margin-left: 155px;
 }
 
 img {

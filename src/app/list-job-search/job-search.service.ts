@@ -14,7 +14,7 @@ export class JobSearchService {
     return this.http.get<Job[]>('/jobs');
   }
 
-  getJobDetail(value: any): Observable<Job> {
+  getJobDetail(value: number): Observable<Job> {
     return this.http.get<Job>('/jobs/' + value);
   }
 

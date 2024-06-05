@@ -1,0 +1,11 @@
+<div><span>Sorry, but you haven't chosen a favorite yet</span></div>
+<div class="container mt-4">
+    <div *ngFor="let job of jobs">
+        <div> <img src="{{job.companyLogo}}" alt="" /></div>
+        <div class="">
+            {{ job.title }}
+        </div>
+        <div>Company: {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
+        </div>
+    </div>
+</div>

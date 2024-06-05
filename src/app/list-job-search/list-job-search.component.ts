@@ -14,25 +14,24 @@ import { Job } from './job.model';
   styleUrl: './list-job-search.component.css',
 })
 export class ListJobSearchComponent implements OnInit {
-  
-  
+
+  isFavorite: boolean = false;
+  jobs: any;
+  fav: Job[] = [];
+  filter!: number;
+
+
   private mockHandlers = inject(JobSearchService);
-  
-  jobs = this.mockHandlers.ALL_JOBS;
-  
+
   ngOnInit(): void {
-    console.log(this.jobs);
+    this.mockHandlers.getJobs().subscribe((job) => {
+      this.jobs = job;
+    });
   }
 
-  getImageUrl(job: Job) {
-    if (!job) return '';
-    return job.companyLogo;
+  getFavorite(value: any) {
+    this.fav.push(value);
+    console.log(this.fav);
   }
-
-  // async getAllJob() {
-  //   const response = await fetch('/jobs');
-  //   const job = await response.json();
-  //   console.log(job);
-  // }
 
 }

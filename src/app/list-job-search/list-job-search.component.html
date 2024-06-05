@@ -1,14 +1,17 @@
-<div class="container mt-4">
-  <div>Job Offers</div>
+<div class="container">
   <div *ngFor="let job of jobs">
-    <div> <img src="{{job.companyLogo}}" alt="" /></div>
-    <a [routerLink]="['/job', job.id]">
-      <div class="">
-        {{ job.title }}
+    <div class="bloc"> <img src="{{job.companyLogo}}" alt="" />
+      <a [routerLink]="['/job', job.id]">
+        <div class="title">
+          <span>{{ job.title }}</span>
+        </div>
+      </a>
+      <div class="company-ref"><span> {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
+        </span>
       </div>
-    </a>
-    <div>Company: {{ job.companyName }} &nbsp; &nbsp; &nbsp; &nbsp; Reference: {{ job.reference }}
-      <span class="icon-star"></span>
+      <div>
+        <span (click)="getFavorite(job)" class="icon-star" [ngClass]="job ? 'yellow' : ''"></span>
+      </div>
     </div>
   </div>
 </div>

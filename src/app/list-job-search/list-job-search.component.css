@@ -1,0 +1,16 @@
+.bloc {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    margin-top: 25px;
+}
+
+.company-ref {
+    margin-top: 50px;
+}
+
+.yellow {
+    color: yellow;
+}
